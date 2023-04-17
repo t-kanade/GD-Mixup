@@ -14,7 +14,7 @@ from dataset import SparseTensorDataset
 
 onehot_criterion = torch.nn.BCEWithLogitsLoss()
 
-class Agent:
+class GM_Agent:
     def __init__(self, packed_data, args, device, nnodes_syn):
         [trainset, valLoader, num_feats, num_classes] = packed_data
         self.data = trainset
@@ -405,4 +405,6 @@ class Agent:
     def clip(self):
         # clip the weights
         self.adjs_syn.data.clamp_(min=0, max=1)
+
+
 

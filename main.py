@@ -7,7 +7,7 @@ from torch_geometric.loader import DataLoader
 
 from dataset import basicDataset
 from gMixup import MixupDataset
-from GDM import Agent
+from GM_Agent import GM_Agent
 from utils import prepare_dataset_x
 from comparsion import compare
 
@@ -111,7 +111,7 @@ if args.GD == True:
     else:
         raise NotImplementedError
 
-    GD_Agent = Agent(packed_data, args, device, nnodes_syn)
+    GD_Agent = GM_Agent(packed_data, args, device, nnodes_syn)
     train_loader = GD_Agent.train()
 
 
