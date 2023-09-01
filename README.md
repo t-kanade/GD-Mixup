@@ -1,2 +1,2 @@
-# GD-Mixup
-GDD with Mixup Augmentation
+# GDDA
+Graph Dataset Distillation with Augmentation
